@@ -1,0 +1,51 @@
+1) Range()
+2) Basics of Python
+3) Type() -----in data analysis (type of data--dataframe)
+4) Predefined functions in pandas like count(), sum(), etc.
+5) np.arrange
+
+data1=data[data.SPM < 50]
+data2=data[data.SPM > 50 and data.SPM <= 60]
+data3=data[data.SPM > 60 and data.SPM <= 75]
+data4=data[data.SPM > 75]
+
+
+An integrated development environment (IDE) is software for developing applications that aggregates developer tools into a single graphical user interface (GUI). An IDE ordinarily comprises of source code editor, local build automation, debugger, code libraries, etc. Unity is one of the recommended IDE to build AR applications by most of the developers.
+
+
+data1=data[(data.SPM < '50') & (data.CC < '50') & (data.AI < '50') & (data.RTS < '50')]
+
+
+# Percentage of students scored in SPM 
+import pandas as pd
+from matplotlib import pyplot as plt
+data= pd.read_csv('Python_TestData2.csv')
+d1=data.loc[(data['SPM'] < '50')].count()
+data1= np.array(d1.SPM)
+d2=data.loc[(data['SPM'] > '50') & (data['SPM'] < '60')].count()
+data2= np.array(d2.SPM)
+d3=data.loc[(data['SPM'] > '60') & (data['SPM'] < '75')].count()
+data3= np.array(d3.SPM)
+d4=data.loc[(data['SPM'] > '75')].count()
+data4= np.array(d4.SPM)
+values = np.array([data1,data2,data3,data4])
+labels= ['Marks < 50', 'Marks= 50-60', 'Marks= 60-75', 'Marks > 75']
+
+data2=(data['SPM'] > '50').count() & (data['SPM'] < '60').count()
+
+plt.axis("equal")
+plt.pie (values, labels=labels, radius=1.5, autopct='%0.0f%%', shadow=True, explode=[0,0,0,0])
+plt.show()
+
+
+
+
+x must be 1D
+DataFrame' object has no attribute 'to_String'
+
+
+
+https://fmovies.to/film/teen-wolf.5wz0/n35zz2n
+
+https://www.redhat.com/en/topics/middleware/what-is-ide-----ide
+
